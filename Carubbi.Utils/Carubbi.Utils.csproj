@@ -69,6 +69,7 @@
     <Compile Include="Data\GenericMultipleComparer.cs" />
     <Compile Include="Diagnostics\MutexRunner.cs" />
     <Compile Include="Localization\LocalizedDescriptionAttribute.cs" />
+    <Compile Include="Localization\LocalizedDisplayAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Persistence\Serializer.cs" />
   </ItemGroup>

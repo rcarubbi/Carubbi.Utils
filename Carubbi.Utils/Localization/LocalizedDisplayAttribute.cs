@@ -4,11 +4,10 @@ using System.Resources;
 
 namespace Carubbi.Utils.Localization
 {
-
     /// <summary>
-    /// Attribute to get description from resource file
+    /// 
     /// </summary>
-    public class LocalizedDescriptionAttribute : DescriptionAttribute
+    public sealed class LocalizedDisplayAttribute : DisplayNameAttribute
     {
         private readonly string _resourceKey;
         private readonly ResourceManager _resource;
@@ -18,16 +17,17 @@ namespace Carubbi.Utils.Localization
         /// </summary>
         /// <param name="resourceKey"></param>
         /// <param name="resourceType"></param>
-        public LocalizedDescriptionAttribute(string resourceKey, Type resourceType)
+        public LocalizedDisplayAttribute(string resourceKey, Type resourceType)
         {
             _resource = new ResourceManager(resourceType);
             _resourceKey = resourceKey;
         }
 
+
         /// <summary>
-        /// Get description
+        /// 
         /// </summary>
-        public override string Description
+        public override string DisplayName
         {
             get
             {
@@ -38,5 +38,8 @@ namespace Carubbi.Utils.Localization
                     : displayName;
             }
         }
+
+
+
     }
 }
